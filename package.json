@@ -1,0 +1,13 @@
+{
+  "name": "xinshi-duihua",
+  "version": "1.0.0",
+  "description": "心事对话 · 基于MRI短程治疗的自助对话工具",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
