@@ -27,14 +27,17 @@
   }
   .clear-btn {
     position: absolute;
-    top: 12px;
-    right: 14px;
+    top: 38px;
+    right: 12px;
     font-size: 12px;
-    color: #b0b0b0;
+    color: #fff;
+    background: #52a883;
     cursor: pointer;
-    padding: 2px 6px;
+    padding: 5px 12px;
+    border-radius: 14px;
+    font-weight: 500;
   }
-  .clear-btn:active { color: #888; }
+  .clear-btn:active { background: #468f70; }
   .header .title { font-size: 17px; font-weight: 600; }
   .header .slogan { font-size: 12px; color: #8a9a8a; margin-top: 2px; letter-spacing: 2px; }
   .header .subtitle { font-size: 11px; color: #999; margin-top: 6px; line-height: 1.5; }
@@ -118,7 +121,7 @@
     <div class="title">心里有事</div>
     <div class="slogan">请个事假</div>
     <div class="subtitle">这是一个陪你梳理困扰的自助小工具，不是心理咨询或医疗<br>如遇心理危机，请拨打心理援助热线或就医</div>
-    <div id="clearBtn" class="clear-btn">清空记录</div>
+    <div id="clearBtn" class="clear-btn">聊后即焚</div>
   </div>
 
   <div class="messages" id="messages">
@@ -280,7 +283,7 @@
   const clearBtn = document.getElementById('clearBtn');
   if (clearBtn) {
     clearBtn.addEventListener('click', () => {
-      if (!confirm('确定清空这台设备上保存的对话记录吗？此操作无法撤销。')) return;
+      if (!confirm('确定把这台设备上的这段对话烧掉吗？烧掉后无法找回。')) return;
       history = [];
       saveHistory();
       // 清空界面
